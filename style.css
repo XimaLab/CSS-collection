@@ -126,8 +126,8 @@ main {
 
 /*TOGGLE*/
 
-.knobs,
-.layer {
+.weird-toggle-circles,
+.weird-toggle-layer {
     position: absolute;
     top: 0;
     right: 0;
@@ -135,17 +135,17 @@ main {
     left: 0;
 }
 
-.button {
+.weird-toggle {
     position: relative;
     width: 100px;
     height: 50px;
     overflow: hidden;
     border-radius: 100px;
 }
-.layer {
+.weird-toggle-layer {
     border-radius: 100px;
 }
-.checkbox {
+.weird-toggle-checkbox {
     position: relative;
     width: 100%;
     height: 100%;
@@ -156,19 +156,19 @@ main {
     z-index: 3;
 }
 
-.knobs {
+.weird-toggle-circles {
     z-index: 2;
 }
 
-.layer {
+.weird-toggle-layer {
     width: 100%;
     background-color: rgba(255, 178, 147, 0.1);
     transition: 0.3s ease all;
     z-index: 1;
 }
 
-#button-2 .knobs:before,
-#button-2 .knobs:after {
+.weird-toggle .weird-toggle-circles:before,
+.weird-toggle .weird-toggle-circles:after {
     content: "NO";
     position: absolute;
     font-family: Anybody, sans-serif;
@@ -190,28 +190,55 @@ main {
     align-items: center;
 }
 
-#button-2 .knobs:before {
+.weird-toggle .weird-toggle-circles:before {
     content: "NO";
 }
 
-#button-2 .knobs:after {
+.weird-toggle .weird-toggle-circles:after {
     content: "YES";
 }
 
-#button-2 .knobs:after {
+.weird-toggle .weird-toggle-circles:after {
     right: -40px;
     left: auto;
     background-color: rgba(93, 251, 61, 0.5);
 }
 
-#button-2 .checkbox:checked + .knobs:before {
+.weird-toggle .weird-toggle-checkbox:checked + .weird-toggle-circles:before {
     left: -40px;
 }
 
-#button-2 .checkbox:checked + .knobs:after {
+.weird-toggle .weird-toggle-checkbox:checked + .weird-toggle-circles:after {
     right: 4px;
 }
 
-#button-2 .checkbox:checked ~ .layer {
+.weird-toggle .weird-toggle-checkbox:checked ~ .weird-toggle-layer {
     background-color: rgba(200, 255, 187, 0.1);
+}
+
+
+/*Magnetic-btn*/
+
+
+.magnetic-btn {
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+}
+
+.magnetic-btn div {
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    font-size: 0.8em;
+    font-family: Anybody, sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    width: 100px;
+    padding: 18px 0;
+    margin: 35px;
+    border-radius: 8px;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    transition: transform 0.15s linear;
+    background: linear-gradient(90deg, #671aec, #e261f6);
 }
