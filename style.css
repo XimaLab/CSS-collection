@@ -217,7 +217,7 @@ main {
 }
 
 
-/*Magnetic-btn*/
+/*MAGNETIC bTN*/
 
 
 .magnetic-btn {
@@ -242,3 +242,90 @@ main {
     transition: transform 0.15s linear;
     background: linear-gradient(90deg, #671aec, #e261f6);
 }
+
+/*CURTAIN BTN*/
+
+.curtain-btn {
+    position: relative;
+    overflow: hidden;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+    background-color: #6b6b6b;
+}
+
+.curtain-btn span {
+    font-family: Anybody, sans-serif;
+    color: #fff200;
+}
+
+.st1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+    z-index: 2;
+    transition: 0s linear;
+}
+.st2 {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+    transition: top 0s linear;
+    z-index: 2;
+}
+
+.curtain-btn:hover .st1 {
+    top: -10px;
+    transition: top 0.1s linear;
+}
+
+.curtain-btn:hover .st2 {
+    top: 50%;
+    transition: 0.2s ease;
+    transition-delay: 0.2s;
+}
+
+.curtain-btn:before {
+    z-index: 1;
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: #121212;
+    cursor: pointer;
+    transition: 0s linear;
+}
+
+.curtain-btn:hover:before {
+    transform: translateX(-50%) scale(15);
+    transition: 0.4s linear;
+}
+
+.curtain-btn:after {
+    content: "";
+    width: 150px;
+    height: 50px;
+    background-color: #121212;
+    position: absolute;
+    top: -50px;
+    left: 0;
+    transition: 0.4s ease;
+}
+
+.curtain-btn:hover:after {
+    top: 0;
+    transition: 0s linear;
+    transition-delay: 0.4s;
+}
+
