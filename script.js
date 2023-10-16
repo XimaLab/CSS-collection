@@ -30,3 +30,35 @@ const magneticBtn = () => {
     });
 }
 magneticBtn()
+
+const gridImg = () => {
+    const grid = document.querySelector('.grid-img-container');
+
+    for(let i = 0; i < 25; i++) {
+        grid.appendChild(document.createElement("div"))
+    }
+}
+gridImg()
+
+const card3D = () => {
+    const container = document.querySelector(".card-3D-container");
+
+    const  rotate = (e) => {
+        const card = document.querySelector(".card-3D");
+        const force = 5;
+        const offsetY = -(e.offsetY - card.offsetHeight / 2) / force;
+        const offsetX = (e.offsetX - card.offsetWidth / 2) / force;
+        card.style.transform =
+            "rotateX(" + offsetY + "deg) rotateY(" + offsetX + "deg)";
+    }
+
+    const clearRotate = (e) => {
+        const card = document.querySelector(".card-3D");
+        card.style.transform = "rotateX(0) rotateY(0)";
+    }
+
+    container.addEventListener("mousemove", rotate);
+    container.addEventListener("mouseleave", clearRotate);
+}
+
+card3D()

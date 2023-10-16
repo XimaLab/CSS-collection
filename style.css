@@ -483,4 +483,94 @@ main {
 }
 
 
+/*UNDERLINED-TXT*/
+
+.underlined-container {
+    padding: 10px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.underlined-txt {
+    position: relative;
+    cursor: pointer;
+}
+
+.underlined-txt p {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    z-index: 2;
+    position: relative;
+    font-family: Anybody, sans-serif;
+}
+
+.underlined-txt:before {
+    content: "";
+    width: 0;
+    height: 60%;
+    background-color: rgba(0, 234, 255, 0.6);
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    z-index: 1;
+    transition: 0.5s ease;
+}
+
+.underlined-txt:hover:before {
+    width: 100%;
+}
+
+/*GRID-IMG*/
+
+.grid-img-container {
+    display: grid;
+    width: 100px;
+    height: 100px;
+    background-image: url("./assets/images/atomium.png");
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.grid-img-container div {
+    background-color: black;
+    transition: opacity 3s ease;
+}
+
+.grid-img-container div:hover {
+    background-color: black;
+    opacity: 0;
+    transition: opacity 0s;
+}
+
+/*3D-card*/
+
+.card-3D-container {
+    height: 120px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 100px;
+}
+
+.card-3D {
+    border-radius: 10px;
+    height: 50px;
+    width: 80px;
+    background-color: #2EC4B6;
+    backdrop-filter: blur(10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    transition: transform 0.2s linear;
+}
+
+
+
 
